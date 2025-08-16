@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda de Decoración</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div id="branding">
+            <h1><span class="highlight">Mi Tienda</span> de Decoración</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="cuenta.html">Mi Cuenta</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- Página de Blog -->
+<section id="blog" class="main-content">
+    <div class="container">
+        <h1>Nuestro Blog</h1>
+        <div class="blog-post">
+            <h2>Tendencias de Decoración 2024</h2>
+            <p>Fecha: 1 de Marzo, 2024</p>
+            <p>Descubre las últimas tendencias en decoración para este año. Desde colores vibrantes hasta estilos minimalistas, te contamos todo lo que necesitas saber para mantener tu hogar a la moda.</p>
+            <button class="button_1">Leer más</button>
+        </div>
+        <div class="blog-post">
+            <h2>Cómo Elegir la Iluminación Perfecta</h2>
+            <p>Fecha: 15 de Febrero, 2024</p>
+            <p>La iluminación adecuada puede transformar completamente un espacio. En este artículo, te damos consejos para elegir las mejores opciones de iluminación para cada habitación de tu hogar.</p>
+            <button class="button_1">Leer más</button>
+        </div>
+    </div>
+</section>
+<footer>
+    <p>Mi Tienda de Decoración, Copyright &copy; 2024</p>
+</footer>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Obtener el nombre de la página actual del URL
+        const currentPage = window.location.pathname.split("/").pop();
+
+        // Seleccionar todos los enlaces del menú de navegación
+        const navLinks = document.querySelectorAll("nav ul li a");
+
+        navLinks.forEach(link => {
+            // Obtener el nombre del archivo del enlace
+            const linkPage = link.getAttribute("href");
+
+            // Comparar el enlace con la página actual
+            if (linkPage === currentPage) {
+                link.parentElement.classList.add("current"); // Añadir la clase 'current' al li
+            }
+        });
+    });
+
+</script>
+</html>

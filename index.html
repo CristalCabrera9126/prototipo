@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Tienda de Decoración</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <div id="branding">
+      <h1><span class="highlight">El Rincón</span> de tu Hogar</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="cuenta.html">Mi Cuenta</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="showcase">
+  <div class="container">
+    <h1>Decora tu hogar con estilo</h1>
+    <p>Descubre las últimas tendencias en decoración y haz de tu casa un hogar</p>
+  </div>
+</section>
+
+<section id="newsletter">
+  <div class="container">
+    <h1>Suscríbete a nuestro boletín</h1>
+    <form>
+      <input type="email" placeholder="Ingresa tu email...">
+      <button type="submit" class="button_1">Suscribirse</button>
+    </form>
+  </div>
+</section>
+
+<section id="boxes">
+  <div class="container">
+    <div class="box">
+      <img src="https://i.pinimg.com/236x/c3/b7/47/c3b7476e8a146ae5accf276683b80de2.jpg" alt="Decoración de habitación">
+      <h3>Decoración de habitación</h3>
+      <p>Transforma tu espacio con nuestras ideas de decoración.</p>
+    </div>
+    <div class="box">
+      <img src="https://thumbs.dreamstime.com/b/single-white-gift-box-gold-bow-red-satin-fabric-single-white-gift-box-large-gold-satin-bow-sits-red-327827792.jpg" alt="Regalos">
+      <h3>Regalos</h3>
+      <p>Encuentra el regalo perfecto para tus seres queridos.</p>
+    </div>
+    <div class="box">
+      <img src="https://m.media-amazon.com/images/I/71sNFtmJy9L._AC_UF894,1000_QL80_.jpg" alt="Tendencias">
+      <h3>Tendencias</h3>
+      <p>Mantente al día con las últimas tendencias en decoración.</p>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <p>Mi Tienda de Decoración, Copyright &copy; 2024</p>
+</footer>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Obtener el nombre de la página actual del URL
+    const currentPage = window.location.pathname.split("/").pop();
+
+    // Seleccionar todos los enlaces del menú de navegación
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    navLinks.forEach(link => {
+      // Obtener el nombre del archivo del enlace
+      const linkPage = link.getAttribute("href");
+
+      // Comparar el enlace con la página actual
+      if (linkPage === currentPage) {
+        link.parentElement.classList.add("current"); // Añadir la clase 'current' al li
+      }
+    });
+  });
+
+</script>
+</html>

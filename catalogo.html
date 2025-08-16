@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Tienda de Decoración</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <div id="branding">
+      <h1><span class="highlight">Mi Tienda</span> de Decoración</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html">Nosotros</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="cuenta.html">Mi Cuenta</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="catalog">
+  <div class="container">
+    <h1>Nuestro Catálogo</h1>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://www.calliaweb.co.uk/wp-content/uploads/2015/10/300x200.jpg" alt="Lámpara moderna">
+        <h3>Lámpara Moderna</h3>
+        <p>Ilumina tu espacio con estilo</p>
+        <div class="price">$59.99</div>
+        <button class="button_1">Agregar al carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="https://www.calliaweb.co.uk/wp-content/uploads/2015/10/300x200.jpg" alt="Cojín decorativo">
+        <h3>Cojín Decorativo</h3>
+        <p>Añade confort y color a tu sofá</p>
+        <div class="price">$24.99</div>
+        <button class="button_1">Agregar al carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="https://www.calliaweb.co.uk/wp-content/uploads/2015/10/300x200.jpg" alt="Florero de cerámica">
+        <h3>Florero de Cerámica</h3>
+        <p>Elegante diseño para tus flores</p>
+        <div class="price">$39.99</div>
+        <button class="button_1">Agregar al carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="https://www.calliaweb.co.uk/wp-content/uploads/2015/10/300x200.jpg" alt="Cuadro abstracto">
+        <h3>Cuadro Abstracto</h3>
+        <p>Arte moderno para tus paredes</p>
+        <div class="price">$89.99</div>
+        <button class="button_1">Agregar al carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="https://www.calliaweb.co.uk/wp-content/uploads/2015/10/300x200.jpg" alt="Reloj de pared">
+        <h3>Reloj de Pared</h3>
+        <p>Estilo y funcionalidad en uno</p>
+        <div class="price">$49.99</div>
+        <button class="button_1">Agregar al carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="https://www.calliaweb.co.uk/wp-content/uploads/2015/10/300x200.jpg" alt="Maceta decorativa">
+        <h3>Maceta Decorativa</h3>
+        <p>Dale vida a tus plantas de interior</p>
+        <div class="price">$34.99</div>
+        <button class="button_1">Agregar al carrito</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Mi Tienda de Decoración, Copyright &copy; 2024</p>
+</footer>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Obtener el nombre de la página actual del URL
+    const currentPage = window.location.pathname.split("/").pop();
+
+    // Seleccionar todos los enlaces del menú de navegación
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    navLinks.forEach(link => {
+      // Obtener el nombre del archivo del enlace
+      const linkPage = link.getAttribute("href");
+
+      // Comparar el enlace con la página actual
+      if (linkPage === currentPage) {
+        link.parentElement.classList.add("current"); // Añadir la clase 'current' al li
+      }
+    });
+  });
+
+</script>
+</html>
